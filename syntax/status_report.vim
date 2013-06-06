@@ -20,7 +20,7 @@ highlight problem_tag guibg=Yellow guifg=Red gui=bold,underline
 syntax match status_report_header 'DBA Activity Report 20[012][0-9]-\(0[1-9]\|1[012]\)-\(0[1-9]\|[12][0-9]\|3[01]\) (\w\+\, [A-Z]\{2\})'
 syntax match status_report_asterisk '^\*'
 syntax match status_report_manager_tag '\[\(Armand\|Milton\|Joseph\|David\|Jilles\|Jing\|ALL\)\]'
-syntax match status_report_platform_tag '\[\(AM\|AU\|CA\|EA\|EK\|GT\|KI\|KJ\|LQ\|MP\|NOC\|PO\|DW\|CORE\)\]'
+syntax match status_report_platform_tag '\[\(AM\|AU\|CA\|DK\|EA\|EK\|GT\|KI\|KJ\|LQ\|MP\|NOC\|PO\|DW\|CORE\)\]'
 syntax match status_report_lmc_tag '\[LMC\]'
 syntax match problem_tag '\[PROBLEM\]'
 syntax match status_report_ticket_id '([A-Z]\+-[0-9]\+)'
