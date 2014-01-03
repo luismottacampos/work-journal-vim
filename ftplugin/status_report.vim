@@ -38,7 +38,7 @@ endfunction
 
 " Add mappings, unless the user didn't want this.
 if !exists("no_plugin_maps") && !exists("no_mail_maps")
-        map <buffer> <silent> <LocalLeader>HA :call AddAmsterdamStatusReportHeader()<CR>
+    map <buffer> <silent> <LocalLeader>HA :call AddAmsterdamStatusReportHeader()<CR>
 	map <buffer> <silent> <LocalLeader>HM :call AddMilanStatusReportHeader()<CR>
 	map <buffer> <silent> <LocalLeader>HB :call AddBerlinStatusReportHeader()<CR>
 	map <buffer> <silent> <LocalLeader>HL :call AddLondonStatusReportHeader()<CR>

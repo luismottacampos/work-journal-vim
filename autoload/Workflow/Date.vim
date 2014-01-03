@@ -16,7 +16,8 @@ endfunction
 " <days_ago> days in the past.
 function! Workflow#Date#GetDateAsDictionary( days_ago )
         let tmp_date = split( strftime( '%Y %m %d %W', Workflow#Date#GetUnixTimeFrom( a:days_ago ) ) )
-        let date = { 'year': tmp_date[0], 'month': tmp_date[1], 'day': tmp_date[2], 'week': tmp_date[3] }
+        " To make week match iCal's weeks, we need to add one.
+        let date = { 'year': tmp_date[0], 'month': tmp_date[1], 'day': tmp_date[2], 'week': 1 + tmp_date[3] }
         return date
 endfunction
 

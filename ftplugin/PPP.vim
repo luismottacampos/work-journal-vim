@@ -98,7 +98,7 @@ endfunction
 " **************************************************
 " PPPHeader()
 function! PPPHeader()
-        return strftime( 'PPP Week %W' )
+        return strftime( 'PPP Week %V' )
 endfunction
 
 function! GetPPPLogEntries()
