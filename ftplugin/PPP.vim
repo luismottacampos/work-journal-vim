@@ -14,7 +14,7 @@
 " **************************************************
 " Configuration Options
 " **************************************************
-let s:worklog_dir = '/Users/lucampos/Documents/Worklog'
+let s:worklog_dir = '/Users/lcampos/Documents/Worklog'
 
 " **************************************************
 " Buffer-Local Settings

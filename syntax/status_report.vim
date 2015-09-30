@@ -19,14 +19,14 @@ highlight interruption_tag guibg=Yellow guifg=Black
 highlight success_tag guibg=Green guifg=Black
 
 " Syntax Definitions
-syntax match status_report_header 'DBA Activity Report 20[012][0-9]-\(0[1-9]\|1[012]\)-\(0[1-9]\|[12][0-9]\|3[01]\) (\w\+\, [A-Z]\{2\})'
+syntax match status_report_header 'Activity Report 20[012][0-9]-\(0[1-9]\|1[012]\)-\(0[1-9]\|[12][0-9]\|3[01]\) (\w\+\, [A-Z]\{2\})'
 syntax match status_report_asterisk '^\*'
-syntax match status_report_manager_tag '\[\(Armand\|Milton\|Joseph\|David\|Jilles\|ALL\)\]'
-syntax match status_report_platform_tag '\[\(AM\|AU\|CA\|DK\|EA\|EK\|GT\|KI\|KJ\|LQ\|MP\|MO\|NOC\|NW\|PO\|DW\|CORE\)\]'
+syntax match status_report_manager_tag '\[[[:alnum:]]\+\]'
+syntax match status_report_platform_tag '\[[[:alnum:]]\+\]'
 syntax match status_report_lmc_tag '\[LMC\]'
 syntax match problem_tag '\[PROBLEM\]'
 syntax match interruption_tag '\[INTERRUPTION\]'
-syntax match status_report_ticket_id '([A-Z]\+-[0-9]\+)'
+syntax match status_report_ticket_id '\#[0-9]\+\-[0-9]\+'
 syntax match status_report_todo_item '(TODO)'
 syntax match status_report_url 'https\{0,1\}:\/\/[A-Za-z0-9_\.\/\~\-\+]\+'
 syntax match status_report_server '[a-z][a-z]\-[a-z]\+[0-9]\+'
