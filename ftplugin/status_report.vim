@@ -20,10 +20,6 @@ function! AddStatusReportHeader( cityString, countryString )
 	let failed = append( 0, GetStatusReportHeader( a:cityString, a:countryString ) )
 endfunction
 
-function! AddAmsterdamStatusReportHeader()
-	call AddStatusReportHeader( 'Amsterdam', 'NL' )
-endfunction
-
 " Add mappings, unless the user didn't want this.
 if !exists("no_plugin_maps") && !exists("no_mail_maps")
     map <buffer> <silent> <LocalLeader>HA :call AddAmsterdamStatusReportHeader()<CR>
