@@ -12,7 +12,7 @@ setlocal spelllang=en_gb
 
 " Add mappings, unless the user didn't want this.
 if !exists("no_plugin_maps") && !exists("no_mail_maps")
-    map <Localleader>S :call CreateOrOpenCurrentStatusReport()<CR>
+    map <Localleader>S :call WorkJournal#CreateOrOpenCurrentStatusReport()<CR>
 endif
 
 " This file is part of the Work Journal VIM Extension

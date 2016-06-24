@@ -14,7 +14,7 @@ setlocal spelllang=en_gb
 
 " Add mappings, unless the user didn't want this.
 if !exists("no_plugin_maps") && !exists("no_mail_maps")
-    map <buffer> <silent> <LocalLeader>P :call BuildPPPReport()<CR>
+    map <buffer> <silent> <LocalLeader>P :call WorkJournal#BuildPPPReport()<CR>
 endif
 
 " This file is part of the Work Journal VIM Extension

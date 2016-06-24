@@ -1,5 +1,5 @@
 " Syntax Definitions for Status Report Files
-" Author: Luis Motta Campos <lucampos@ebay.com>
+" Author: Luis Motta Campos
 
 syntax clear
 syntax case match
