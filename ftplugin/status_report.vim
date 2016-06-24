@@ -10,6 +10,11 @@
 setlocal spell
 setlocal spelllang=en_gb
 
+" Add mappings, unless the user didn't want this.
+if !exists("no_plugin_maps") && !exists("no_mail_maps")
+    map <Localleader>S :call CreateOrOpenCurrentStatusReport()<CR>
+endif
+
 function! GetStatusReportHeader ( cityString, countryString )
 	let l:date = Workflow#Date#GetDateAsDictionary( 0 )
 	let l:headerTemplate = 'Activity Report %04d-%02d-%02d (%s, %s)'
@@ -20,10 +25,6 @@ function! AddStatusReportHeader( cityString, countryString )
 	let failed = append( 0, GetStatusReportHeader( a:cityString, a:countryString ) )
 endfunction
 
-" Add mappings, unless the user didn't want this.
-if !exists("no_plugin_maps") && !exists("no_mail_maps")
-    map <buffer> <silent> <LocalLeader>HA :call AddAmsterdamStatusReportHeader()<CR>
-endif
 
 " This file is part of the Work Journal VIM Extension
 " 
