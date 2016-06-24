@@ -10,6 +10,11 @@
 setlocal spell
 setlocal spelllang=en_gb
 
+" Add mappings, unless the user didn't want this.
+if !exists("no_plugin_maps") && !exists("no_mail_maps")
+    map <Localleader>S :call CreateOrOpenCurrentStatusReport()<CR>
+endif
+
 function! GetStatusReportHeader ( cityString, countryString )
 	let l:date = Workflow#Date#GetDateAsDictionary( 0 )
 	let l:headerTemplate = 'Activity Report %04d-%02d-%02d (%s, %s)'
@@ -20,14 +25,19 @@ function! AddStatusReportHeader( cityString, countryString )
 	let failed = append( 0, GetStatusReportHeader( a:cityString, a:countryString ) )
 endfunction
 
-function! AddAmsterdamStatusReportHeader()
-	call AddStatusReportHeader( 'Amsterdam', 'NL' )
-endfunction
+" Opens Today's Status Report
+function! CreateOrOpenCurrentStatusReport()
+    let l:dirname = '/Users/luis/Documents/Worklog/' . strftime( '%Y/%m/', localtime() )
+    let l:filename = l:dirname . strftime( '%Y%m%d.report', localtime() )
 
-" Add mappings, unless the user didn't want this.
-if !exists("no_plugin_maps") && !exists("no_mail_maps")
-    map <buffer> <silent> <LocalLeader>HA :call AddAmsterdamStatusReportHeader()<CR>
-endif
+    if exists("*mkdir")
+        if ! isdirectory( l:dirname )
+            call mkdir( l:dirname, 'p' )
+        endif
+    endif
+    execute 'edit! ' . l:filename
+    call AddStatusReportHeader('Toronto', 'CA')
+endfunction
 
 " This file is part of the Work Journal VIM Extension
 " 
