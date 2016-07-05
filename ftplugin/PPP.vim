@@ -1,9 +1,6 @@
 " **************************************************
 " File Type Plugin Progress-Problem-Plans Report
 
-" Configuration Options
-let s:worklog_dir = '/Users/luis/Documents/Worklog'
-
 " Buffer-Local Settings
 
 " Spell Checking is important and should be always active.

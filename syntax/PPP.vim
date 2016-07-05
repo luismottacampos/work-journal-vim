@@ -23,7 +23,7 @@ syntax match PPP_header 'PPP Week \([01234][0-9]\|5[012]\)\|^Progress\|^Problems
 syntax match PPP_asterisk '^\*'
 syntax match PPP_manager_tag '\[[[:alnum:]]\+\]'
 syntax match PPP_platform_tag '\[[[:alnum:]]\+\]'
-syntax match PPP_ticket_id '\#[0-9]\+\-[0-9]\+'
+syntax match PPP_ticket_id '([A-Z]\{1,3\}-[[:digit:]]\{1,\})'
 syntax match PPP_todo_item '(TODO)'
 syntax match PPP_url 'https\{0,1\}:\/\/[A-Za-z0-9_\.\/\~\-\+]\+'
 syntax match PPP_server '[a-z][a-z]\-[a-z]\+[0-9]\+'
