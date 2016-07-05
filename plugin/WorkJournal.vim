@@ -1,3 +1,6 @@
+" Configuration Options
+let s:worklog_dir = '/Users/luis/Documents/Worklog'
+
 " **************************************************
 " Date Generation Functions
 " **************************************************
@@ -133,7 +136,7 @@ endfunction
 " Build a PPP Report on a new buffer
 " **************************************************
 function! WorkJournal#BuildPPPReport()
-	call append( 0, PPP() )
+	call append( 0, WorkJournal#PPP() )
 endfunction
 
 function! WorkJournal#GetStatusReportHeader ( cityString, countryString )
