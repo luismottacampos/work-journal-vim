@@ -1,6 +1,3 @@
-" Configuration Options
-let s:worklog_dir = '/Users/luis/Documents/Worklog'
-
 " **************************************************
 " Date Generation Functions
 " **************************************************
@@ -33,7 +30,7 @@ endfunction
 " a:file_type is the extension desired for the file without the dot.
 function! WorkJournal#FileNameForDate( date, file_type )
         let file_format = '%s/%04d/%02d/%04d%02d%02d.%s'
-        let filename = printf( file_format, s:worklog_dir, a:date['year'], a:date['month'], a:date['year'], a:date['month'], a:date['day'], a:file_type )
+        let filename = printf( file_format, g:work_journal_work_dir, a:date['year'], a:date['month'], a:date['year'], a:date['month'], a:date['day'], a:file_type )
         return simplify( filename )
 endfunction
 
@@ -151,7 +148,7 @@ endfunction
 
 " Opens Today's Status Report
 function! WorkJournal#CreateOrOpenCurrentStatusReport()
-    let l:dirname = '/Users/luis/Documents/Worklog/' . strftime( '%Y/%m/', localtime() )
+    let l:dirname = g:work_journal_work_dir . strftime( '/%Y/%m/', localtime() )
     let l:filename = l:dirname . strftime( '%Y%m%d.report', localtime() )
 
     if exists("*mkdir")

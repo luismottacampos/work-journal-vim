@@ -1,8 +1,6 @@
 " **************************************************
 " File Type Plugin Progress-Problem-Plans Report
 
-" Buffer-Local Settings
-
 " Spell Checking is important and should be always active.
 setlocal spell
 setlocal spelllang=en_gb
