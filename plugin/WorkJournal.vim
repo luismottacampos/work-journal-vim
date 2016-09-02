@@ -115,7 +115,7 @@ function! WorkJournal#PPP()
         call add( report, 'Problems' )
         call add( report, '' )
         call add( report, 'Plans' )
-        call add( report, printf('My to-do-list migrated to the Wiki, at "%s".', g:work_journal_todo_list_link )
+        call add( report, printf('My to-do-list migrated to the Wiki, at "%s".', g:work_journal_todo_list_link ) )
         return report
 endfunction
 
