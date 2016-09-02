@@ -104,15 +104,6 @@ function! WorkJournal#GetPPPLogEntries()
         return entries
 endfunction
 
-" GetPPPToDoItems()
-function! WorkJournal#GetPPPToDoItems()
-        let entries = []
-        for day in [ 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3 ]
-                call extend( entries, WorkJournal#GetToDoEntriesFrom( day ) )
-        endfor
-        return entries
-endfunction
-
 " PPP() (the main function)
 function! WorkJournal#PPP()
         let report = []
@@ -124,7 +115,7 @@ function! WorkJournal#PPP()
         call add( report, 'Problems' )
         call add( report, '' )
         call add( report, 'Plans' )
-        call extend( report, WorkJournal#GetPPPToDoItems() )
+        call add( report, printf('My to-do-list migrated to the Wiki, at "%s".', g:work_journal_todo_list_link )
         return report
 endfunction
 
