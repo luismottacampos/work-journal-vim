@@ -1,0 +1,1 @@
+../autoload/WorkJournal.vim
