@@ -115,7 +115,7 @@ function! WorkJournal#PPP()
         call add( report, 'Problems' )
         call add( report, '' )
         call add( report, 'Plans' )
-        call add( report, printf('My to-do-list migrated to the Wiki, at "%s".', g:work_journal_todo_list_link ) )
+        call add( report, 'See the DBRE Trello Roadmap (https://trello.com/b/7JThbiZb/data-persistence-roadmap) or the Jira Kanban Board (https://pagerduty.atlassian.net/secure/RapidBoard.jspa?rapidView=284).')
         return report
 endfunction
 
